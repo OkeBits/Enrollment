@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #000000c2, #3633cd9f);
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #001b7a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.nav-title h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.nav-title p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -60%; 
+  width: 20%; 
+  height: 100%;
+  background-color: #001a7ab7;
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 9999; 
+}
+
+
+.side-panel.open {
+  right: 0; 
+}
+
+.side-panel-content {
+  padding: 2rem;
+}
+
+.side-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-panel li {
+  margin-bottom: 1.5rem;
+}
+
+.side-panel a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-panel a:hover {
+  color: #ffcc00;
+}
+
+
+.dashboard-main {
+  position: absolute;
+  top: 80px; 
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  background: linear-gradient(90deg, #000000f5, #3633cde0), url('Capture.PNG') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100vw; 
+  height: calc(100vh - 80px); 
+}
+
+
+.center-card {
+  background-color: #002694;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 100%; 
+  width: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.center-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #001b7a;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  width: 100%; 
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+
+@media (max-width: 600px) {
+  .nav-title h1 {
+    font-size: 1rem;
+  }
+
+  .center-card {
+    padding: 1.5rem;
+  }
+
+  .center-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.title {
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+}

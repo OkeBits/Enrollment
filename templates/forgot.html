@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Account - WPHI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="enrollment-info">
+        <h1>Having Trouble?</h1>
+        <h3>WEST PRIME HORIZON INSTITUTE, INC.</h3>
+        <p>Enter your registered email and we’ll help you recover your account.</p>
+      </div>
+    </div>
+    <div class="right-panel">
+      <form class="login-form" onsubmit="return recoverAccount()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXVS2K0UXDA_4FwxXHZxe5VbQ1XXQ1mnUvQ&s" alt="WPHI Logo" class="logo" />
+        <h2>Recover Account</h2>
+
+        <div class="input-group">
+          <span class="icon">📧</span>
+          <input type="email" placeholder="Enter Registered Email" id="recoveryEmail" required />
+        </div>
+
+        <button type="submit">SEND RECOVERY LINK</button>
+        <a href="{{ url_for('index') }}" class="forgot">Back to Login</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

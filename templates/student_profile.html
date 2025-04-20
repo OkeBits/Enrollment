@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Profile</title>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body class="profile-body">
+  <div class="max-w-6xl w-full">
+
+    <h1 class="title">STUDENT PROFILE</h1>
+
+    <div class="profile-sections">
+      <!-- Left Section -->
+      <div class="card">
+        <div class="flex flex-col items-center">
+          {% if enrollment['image_filename'] %}
+          <img src="{{ url_for('static', filename='uploads/' + enrollment['image_filename']) }}" alt="Student profile image" class="profile-image">
+          {% endif %}
+          <h2 class="student-name">{{ enrollment['fullname'] }}</h2>
+        </div>
+        <div class="text-section">
+          <p><strong>Student ID:</strong> {{ enrollment['student_id'] }}</p>
+          <p><strong>Year Level:</strong> {{ enrollment['year'] }}</p>
+          <p><strong>Course:</strong> {{ enrollment['course'] }}</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <p class="section-title">📋 GENERAL INFORMATION:</p>
+        <div class="text-section space-y-2">
+          <p><strong>Email:</strong> {{ enrollment['email'] }}</p>
+          <p><strong>Birthdate:</strong> {{ enrollment['birthdate'] }}</p>
+          <p><strong>Age:</strong> {{ enrollment['age'] }}</p>
+          <p><strong>Enrollment Type:</strong> {{ enrollment['enroll_type'] }}</p>
+          <p><strong>Mother's Name:</strong> {{ enrollment['mothername'] }}</p>
+        <p><strong>Mother's Occupation:</strong> {{ enrollment['motheroccupation'] }}</p>
+        <p><strong>Father's Name:</strong> {{ enrollment['fathername'] }}</p>
+        <p><strong>Father's Occupation:</strong> {{ enrollment['fatheroccupation'] }}</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="card mt-8 w-full">
+      <p class="section-title">🟦 ASSIGNED SUBJECTS</p>
+      <div class="text-section">
+        <p><strong>Instructor:</strong> {{ enrollment['instructor'] }}</p>
+        <p><strong>Room:</strong> {{ enrollment['room'] }}</p>
+        <p><strong>Subjects:</strong> {{ enrollment['subject'] }}</p>
+      </div>
+    </div>
+
+ 
+    <div class="mt-6">
+      <a href="{{ url_for('enrolled') }}" class="inline-block bg-blue-600 text-white font-bold px-4 py-2 rounded hover:bg-blue-700 transition">
+        ⬅ Back to Dashboard
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

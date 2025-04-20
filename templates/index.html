@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Prime Horizon Institute Incorporated</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="enrollment-info">
+        <h2 class="title">THIS IS WEST PRIME HORIZON INSTITUTE, INC.</h2>
+        <h1 class="title"><strong>We reach NEW HEIGHTS!</strong></h1>
+        <p>The leading institution that ensures QUALITY and FREE Senior High School Education in times of change, challenge, and opportunity.</p>
+      </div>
+    </div>
+    <div class="right-panel">
+      <form class="login-form" method="POST" action="/login">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXVS2K0UXDA_4FwxXHZxe5VbQ1XXQ1mnUvQ&s" alt="WestPrime Logo" class="logo" />
+        <h2>West Prime Horizon Institute Inc.</h2>
+        <div class="input-group">
+          <span class="icon">👤</span>
+          <input type="text" name="username" placeholder="Username" required />
+        </div>
+        <div class="input-group">
+          <span class="icon">🔒</span>
+          <input type="password" name="password" placeholder="Password" required />
+        </div>
+        <button type="submit">LOG IN</button>
+        <a href="{{ url_for('register') }}" class="register">CREATE ACCOUNT</a>
+        <a href="{{ url_for('forgot') }}" class="forgot">FORGOT ACCOUNT</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

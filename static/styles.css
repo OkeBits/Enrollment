@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2014c5, #240ab6d3);
+  min-height: 100vh;
+}
+
+body, html {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-panel {
+  flex: 1;
+  background: linear-gradient(90deg, #000000ec, #3633cdc7), url('Capture.PNG');
+  background-size: cover;
+  background-position: center;
+  color: #d4fcd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.enrollment-info {
+  text-align: left;
+}
+
+.enrollment-info h1 {
+  font-size: 2.5rem;
+  color: #baffb6;
+}
+
+.enrollment-info h2, .enrollment-info h3 {
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.enrollment-info p {
+  margin-top: 0.5rem;
+  color: #e0ffe0;
+  font-size: 1rem;
+}
+
+.nav-arrows {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  gap: 1rem;
+}
+
+.right-panel {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 1rem;
+  
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.input-group .icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ccc;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.register, .forgot {
+  display: block;
+  margin-top: 1rem;
+  color: #171877;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-panel, .right-panel {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+  .left-panel {
+    padding: 1rem;
+  }
+  .right-panel {
+    padding: 2rem 1rem;
+  }
+}
+
+.title {
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+}

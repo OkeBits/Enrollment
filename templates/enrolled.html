@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrollment Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='enrolled.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXVS2K0UXDA_4FwxXHZxe5VbQ1XXQ1mnUvQ&s" alt="Logo" class="nav-logo">
+      <div class="nav-title">
+        <h1 class="title">West Prime Horizon Institute Inc.</h1>
+        <p>F Roxas St, Pagadian City, Zamboanga del Sur</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <div class="top-bar">
+      <h1 class="title">Enrollment Dashboard</h2>
+      <form action="{{ url_for('enrolled') }}" method="GET" class="search-form">
+        <input type="text" name="q" placeholder="Search by name..." value="{{ request.args.get('q', '') }}">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <a href="{{ url_for('dashboard') }}" class="back-button">Back to Dashboard</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Year</th>
+          <th>Course</th>
+          <th>Enrollment Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in enrollments %}
+        <tr>
+          <td><a href="{{ url_for('student_profile', student_id=student['student_id']) }}">{{ student['fullname'] }}</a></td>
+          <td>{{ student['year'] }}</td>
+          <td>{{ student['course'] }}</td>
+          <td>{{ student['enroll_type'] }}</td>
+          <td>
+            <form action="{{ url_for('delete_enrollment', student_id=student['student_id']) }}" method="POST">
+              <button type="submit" class="delete-button" onclick="return confirm('Are you sure?');">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 West Prime Horizon Institute. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

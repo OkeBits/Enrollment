@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #000000, #3533cd);
+    min-height: 100vh;
+  }
+
+.navbar {
+    background-color: #001b7a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    box-sizing: border-box;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .nav-title h1 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .nav-title p {
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Ensures the search form is aligned to the right */
+  }
+  
+  .search-form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  .search-form button {
+    padding: 0.5rem 1rem;
+    background-color: #001b7a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .search-form button:hover {
+    background-color: #ffcc00;
+  }
+  
+
+  .back-button {
+    text-decoration: none;
+    color: #001b7a;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+  
+  .back-button:hover {
+    background-color: #001b7a;
+    color: white;
+  }
+  
+
+  table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #001b7a;
+    color: white;
+  }
+  
+  td a {
+    color: #001b7a;
+    text-decoration: none;
+  }
+  
+  td a:hover {
+    color: #ffcc00;
+  }
+  
+  .delete-button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #ffcc00;
+    color: black;
+  }
+  
+
+  .form-container {
+    padding-top: 100px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+
+  .footer {
+    background-color: #001b7a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+
+  @media (max-width: 600px) {
+    .nav-title h1 {
+      font-size: 1rem;
+    }
+  
+    .form-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  
+    .search-form input {
+      width: 150px;
+    }
+  }
+  
+.title {
+    color: white;
+    font-weight: 800;
+    font-size: 2.5rem;
+  }

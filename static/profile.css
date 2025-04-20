@@ -1,0 +1,120 @@
+/* Background and body styling */
+.profile-body {
+  background: linear-gradient(to right, #2e33b8, #1a1a5e, black);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title {
+  color: white;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Section layout - Flexbox */
+.profile-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 48%;
+  }
+}
+
+/* Profile Left Section */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 6px solid #2e33b8;
+}
+
+.student-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Text sections inside the cards */
+.text-section {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Section subtitles like GENERAL INFORMATION */
+.section-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Parent and Subject Information */
+.parent-info,
+.subjects-info {
+  margin-top: 2rem;
+}
+
+/* Back Button Styling */
+.back-btn {
+  display: inline-block;
+  background-color: #2e33b8;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #1a1a5e;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
