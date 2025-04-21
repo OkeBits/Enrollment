@@ -56,8 +56,8 @@ body {
 .side-panel {
   position: fixed;
   top: 0;
-  right: -60%; 
-  width: 20%; 
+  right: -70%; 
+  width: 35%; 
   height: 100%;
   background-color: #001a7ab7;
   color: white;
