@@ -131,24 +131,23 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #001b7a;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  width: 100%; 
-  position: absolute; 
-  bottom: 0;
-  left: 0;
-  box-sizing: border-box;
-  z-index: 100;
-}
-
-
-@media (max-width: 600px) {
-  .nav-title h1 {
-    font-size: 1rem;
+    background-color: #001b7a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
+  
+
+  @media (max-width: 600px) {
+    .nav-title h1 {
+      font-size: 1rem;
+    }
 
   .center-card {
     padding: 1.5rem;
